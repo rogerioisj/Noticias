@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/imagem_inicio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="370dp"
+
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+
+            android:text="Neque porro quisquam est qui"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/imagem_inicio"
+            app:layout_constraintTop_toBottomOf="@id/imagem_inicio" />
+
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="05/07/2020"
+            app:layout_constraintBaseline_toBaselineOf="@+id/titulo"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toRightOf="@id/titulo"
+            app:layout_constraintRight_toRightOf="@id/imagem_inicio" />
+
+        <TextView
+            android:id="@+id/conteudo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="80dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin augue nulla, posuere sit amet elit sed, finibus feugiat enim. Suspendisse a pretium augue. Nunc fermentum ultrices sodales. Nam tincidunt ligula at odio bibendum, in interdum lacus lacinia. In euismod pretium lorem vitae interdum. Integer non varius dui. Phasellus sagittis eros at arcu vulputate, eu varius ligula placerat. Pellentesque nibh elit, efficitur in libero vitae, lacinia pretium lacus. Nam faucibus, quam in scelerisque pulvinar, ipsum felis congue est, ac vestibulum lorem risus ac turpis. Vestibulum finibus luctus efficitur. Nulla iaculis pulvinar arcu vitae pharetra. Proin eget molestie risus. Maecenas ornare, risus sit amet condimentum tincidunt, nisl felis sodales nulla, ac iaculis magna lorem sed dolor. Vestibulum placerat placerat suscipit."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/titulo"
+
+            app:layout_constraintRight_toRightOf="@id/data"
+            app:layout_constraintTop_toBottomOf="@id/titulo" />
+
+        <TextView
+            android:id="@+id/autor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="16dp"
+            android:text="Rogerio Inacio"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/conteudo"
+            app:layout_constraintTop_toBottomOf="@+id/conteudo"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/botao_anterior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="Anterior"
+            app:layout_constraintBaseline_toBaselineOf="@+id/autor"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toRightOf="@id/autor"
+            app:layout_constraintRight_toLeftOf="@id/botao_proximo" />
+
+        <Button
+            android:id="@+id/botao_proximo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="proximo"
+            android:textAllCaps="true"
+            app:layout_constraintBaseline_toBaselineOf="@+id/botao_anterior"
+            app:layout_constraintRight_toRightOf="@id/imagem_inicio" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
